@@ -14,3 +14,4 @@ const deliveryAgentSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("DeliveryAgent", deliveryAgentSchema);
+/*ok */
