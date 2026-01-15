@@ -1,4 +1,4 @@
-const City = require("../models/City");
+const City = require("../models/city");
 
 // Add city (Admin)
 exports.addCity = async (req, res) => {
