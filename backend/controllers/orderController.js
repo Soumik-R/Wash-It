@@ -1,5 +1,5 @@
 const Order = require("../models/Order");
-const City = require("../models/City");
+const City = require("../models/city");
 const Service = require("../models/Service");
 
 // CREATE ORDER
