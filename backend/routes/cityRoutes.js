@@ -13,6 +13,7 @@ const router = express.Router();
 router.post("/add", authMiddleware, addCity);
 
 // Public
+router.get("/", getActiveCities);
 router.get("/active", getActiveCities);
 router.get("/check/:city", checkCity);
 

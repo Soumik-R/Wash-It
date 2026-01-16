@@ -19,7 +19,7 @@ function Register() {
 
   const fetchCities = async () => {
     try {
-      const response = await API.get("/cities");
+      const response = await API.get("/cities/active");
       setCities(response.data);
     } catch (err) {
       console.error("Failed to fetch cities");

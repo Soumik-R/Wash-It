@@ -1,5 +1,5 @@
 const Order = require("../models/Order");
-const DeliveryAgent = require("../models/DeliveryAgent");
+const DeliveryAgent = require("../models/DeliverAgent");
 const batchOrdersGreedy = require("../utils/orderBatching");
 
 exports.assignOrdersToAgent = async (req, res) => {
