@@ -9,6 +9,7 @@ const serviceRoutes = require("./routes/serviceRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const schedulerRoutes = require("./routes/schedulerRoutes");
 const routeRoutes = require("./routes/routeRoutes");
+const batchingRoutes = require("./routes/batchingRoutes");
 
 const app = express();
 app.use(cors());
@@ -20,6 +21,7 @@ app.use("/api/services", serviceRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/scheduler", schedulerRoutes);
 app.use("/api/routes", routeRoutes);
+app.use("/api/batching", batchingRoutes);
 
 app.get("/", (req, res) => {
   res.send("Wash-It Backend Running");
