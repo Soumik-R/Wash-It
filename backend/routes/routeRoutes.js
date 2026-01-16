@@ -1,9 +1,9 @@
 const express = require("express");
 const { optimizeRoute } = require("../controllers/routeController");
-const authMiddleware = require("../middleware/authMiddleware");
 
 const router = express.Router();
 
-router.post("/optimize", authMiddleware, optimizeRoute);
+// Public route for testing/optimization
+router.post("/optimize", optimizeRoute);
 
 module.exports = router;
