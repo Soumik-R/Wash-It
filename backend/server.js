@@ -7,6 +7,7 @@ const authRoutes = require("./routes/authRoutes");
 const cityRoutes = require("./routes/cityRoutes");
 const serviceRoutes = require("./routes/serviceRoutes");
 const orderRoutes = require("./routes/orderRoutes");
+const schedulerRoutes = require("./routes/schedulerRoutes");
 
 const app = express();
 app.use(cors());
@@ -16,6 +17,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/cities", cityRoutes);
 app.use("/api/services", serviceRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/scheduler", schedulerRoutes);
 
 app.get("/", (req, res) => {
   res.send("Wash-It Backend Running");

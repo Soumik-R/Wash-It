@@ -1,6 +1,7 @@
 const Order = require("../models/Order");
 const City = require("../models/city");
 const Service = require("../models/Service");
+const { addOrderToQueue } = require("../utils/orderScheduler");
 
 // CREATE ORDER
 exports.createOrder = async (req, res) => {
@@ -46,6 +47,9 @@ exports.createOrder = async (req, res) => {
       pickupTime,
       deliveryTime
     });
+
+    // Add order to priority queue
+    addOrderToQueue(order);
 
     res.status(201).json({
       message: "Order placed successfully",
